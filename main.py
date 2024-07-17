@@ -165,7 +165,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 		
 		if "Document" == msg_type:
 			try:
-				thumb = acc.download_media(msg.document.thumbs[0].file_id)
+				thumb = "https://graph.org/file/c276c0596de82bf1f5811.jpg"
 			except: thumb = None
 			
 			bot.send_document(message.chat.id, file, thumb=thumb, caption=msg.caption, caption_entities=msg.caption_entities, reply_to_message_id=message.id, progress=progress, progress_args=[message,"up"])
